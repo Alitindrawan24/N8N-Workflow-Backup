@@ -86,4 +86,8 @@ if [ "${GIT_COMMIT}" = "true" ]; then
   TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
   git commit -m "chore(n8n-backup): auto backup ${TS}" || echo "[backup] nothing to commit"
 
-  # Push to main branch
+  # Push to main branch (change 'main' if your branch is different)
+  git push origin main
+fi
+
+echo "[backup] ✅ Done."
